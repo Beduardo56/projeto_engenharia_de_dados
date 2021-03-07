@@ -54,3 +54,5 @@ class CommonStack(core.Stack):
             removal_policy=core.RemovalPolicy.DESTROY,
             **kwargs,
         )
+
+
