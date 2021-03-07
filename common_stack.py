@@ -1,6 +1,6 @@
 from aws_cdk import core
 from aws_cdk import aws_rds as rds, aws_ec2 as ec2
-from projeto_engenharia_de_dados import active_environment
+from projeto_engenharia_de_dados import environment
 
 
 class CommonStack(core.Stack):
@@ -8,7 +8,7 @@ class CommonStack(core.Stack):
     This project aims to construct a MySQL database in production
     """
     def __init__(self, scope: core.Construct, **kwargs) -> None:
-        self.deploy_env = active_environment
+        self.deploy_env = environment
         super().__init__(scope, id=f"{self.deploy_env.value}-common-stack", **kwargs)
 
         self.custom_vpc = ec2.Vpc(self, f"vpc-{self.deploy_env.value}")
