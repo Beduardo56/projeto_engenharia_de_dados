@@ -1,4 +1,6 @@
 -e .
 pytest
 aws_cdk.core
+aws_cdk.aws_rds
+aws_cdk.aws_ec2
 boto3
