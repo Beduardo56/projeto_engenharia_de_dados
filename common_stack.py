@@ -49,7 +49,6 @@ class CommonStack(core.Stack):
                 vpc=self.custom_vpc,
                 vpc_subnets=ec2.SubnetSelection(subnet_type=ec2.SubnetType.PUBLIC),
             ),
-            parameter_group=self.covid_rds_parameter_group,
             security_groups=[self.covid_rds_sg],
             removal_policy=core.RemovalPolicy.DESTROY,
             **kwargs,
